@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>8-OY 3-DARS</title>
-	<style type="text/tailwindcss">@layer utilities{.content-auto{content-visibility: auto;}}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <script defer src="main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background-color: #00000099;">
-	<form class="todo-form bg-white p-5 rounded-[12px] w-[500px] mx-auto mt-[75px]">
-		<input type="text" class="todo-input w-[80%] p-2 rounded-[12px] outline-none border-[2px] border-[#00000075] focus:border-slate-700" placeholder="Enter your todo" required name="todo">
-		<button class="text-center bg-slate-500 text-white rounded-[12px] font-semibold leading-[18px] text-[18px] p-2.5 border-[2px] border-transparent cursor-pointer duration-500 hover:border-slate-700 hover:bg-slate-800 type="submit">Create</button>
-	</form> 
-	<ul class="todo-list bg-white rounded-[12px] w-[500px] mx-auto mt-5 space-y-[15px] p-5 mb-[15px]"></ul>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center mb-4 text-gray-800">Todo App</h1>
+    <form class="todo-form flex items-center mb-4">
+      <input
+        type="text"
+        class="todo-input flex-1 p-2 border rounded-l-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        placeholder="Enter your todo"
+      />
+      <button
+        type="submit"
+        class="p-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600 transition"
+      >
+        Add
+      </button>
+    </form>
+    <ul class="todo-list space-y-2">
+    </ul>
+  </div>
 </body>
-<script src="./main.ts"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config = { theme: { extend: { colors: { clifford: "#da373d" } } } }</script>
 </html>
